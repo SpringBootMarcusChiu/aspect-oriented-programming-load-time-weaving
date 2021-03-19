@@ -47,7 +47,7 @@
 
 	<build>
 		<plugins>
-			<!-- Use this plugin to save `aspectjweaver.jar` to be used in spring-boot-plugin -->
+			<!-- Use this plugin to save `aspectjweaver.jar` to be used in plugins below -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -72,11 +72,13 @@
 				</configuration>
 			</plugin>
 
+			<!-- For Running Spring Boot Application via mvn command -->
+			<!-- mvn spring-boot:run -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<!-- load aspectjweaver javaagent -->
 				<configuration>
-					<!-- Load Java Agents -->
 					<agents>
 						<aspectj>${project.build.directory}/aspectj/aspectjweaver-${aspectj.version}.jar</aspectj>
 					</agents>
