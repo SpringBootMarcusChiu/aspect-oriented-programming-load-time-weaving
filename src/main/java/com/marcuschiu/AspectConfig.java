@@ -6,7 +6,8 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
 @Aspect
-@Component
+//@Component no need for @Component because we are not using Spring AOP but pure AspectJ
+// AspectJ uses resources/org.aspectj/aop.xml to load AspectConfig.java
 public class AspectConfig {
 
 	@Around("execution(* *(..)) && within(com.marcuschiu..*) && !within(com.marcuschiu.AspectConfig+)")
