@@ -1,7 +1,7 @@
 <!DOCTYPE aspectj PUBLIC "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
 <aspectj>
 	<weaver>
-		<include within="com.marcuschiu.*" />
+		<include within="com.marcuschiu..*" />
 	</weaver>
 	<aspects>
 		<aspect name="com.marcuschiu.AspectConfig" />

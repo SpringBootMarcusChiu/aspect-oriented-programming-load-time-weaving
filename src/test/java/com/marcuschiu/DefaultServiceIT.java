@@ -5,13 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest(classes = MainApplication.class)
-public class MainApplicationTest {
+public class DefaultServiceIT {
 
     @Autowired
-    DefaultController defaultController;
+    DefaultService defaultService;
 
     @Test
     public void test() {
-        System.out.println(defaultController.home());
+        System.out.println(defaultService.home());
     }
 }
