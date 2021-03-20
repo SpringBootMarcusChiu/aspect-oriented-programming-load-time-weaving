@@ -1,14 +1,18 @@
 ## Build Project
-- mvn clean package
-  
+- mvn clean compile
+
 ## Run Project
-two ways to run project:
 - mvn spring-boot:run
 - java -javaagent:$HOME/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar -jar target/*.jar
 - java -javaagent:/Users/marcuschiu/.m2/repository/org/aspectj/aspectjweaver/1.9.5/aspectjweaver-1.9.5.jar -jar target/*.jar
 
+## Run Tests
+- mvn clean test
+- mvn clean verify
+
 ## Things to Note
-- application.properties
 - org.aspectj/aop.xml
-- 
-confluence: http://confluence.marcuschiu.com/x/CYGFAQ
+
+## Confluence
+- http://confluence.marcuschiu.com/x/JwBDAQ
+- http://confluence.marcuschiu.com/x/CYGFAQ
